@@ -29,6 +29,7 @@
         <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="49,398,0,0" VerticalAlignment="Top" Background="#FF91B5E6" FontFamily="Yu Mincho" FontSize="16" FontWeight="Bold" Width="77" Height="32" Click="btnUpdate_Click" Grid.Column="1"/>
         <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="311,398,0,0" VerticalAlignment="Top" Background="#FFE28D82" FontFamily="Yu Mincho" FontSize="16" FontWeight="Bold" Width="77" Click="btnClose_Click" Height="32" Grid.Column="1"/>
         <Button x:Name="btnDelete" Content="Delete" HorizontalAlignment="Left" Margin="174,398,0,0" VerticalAlignment="Top" Background="#FFF1EAA8" FontFamily="Yu Mincho" FontSize="16" Width="78" Height="32" Click="btnDelete_Click" Grid.Column="1"/>
+        <Button Content="⬅️" HorizontalAlignment="Left" Margin="12,11,0,0" VerticalAlignment="Top" Width="32" FontSize="20" Click="Button_Click"/>
 
     </Grid>
 </Window>

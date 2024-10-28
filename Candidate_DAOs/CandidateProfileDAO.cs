@@ -56,12 +56,11 @@ namespace Candidate_DAOs
         public bool updateCandidate(CandidateProfile candidateProfile)
         {
             bool isSuccess = false;
+            dbcontext = new CandidateManagementContext();
 
             CandidateProfile candidate = searchCandidateByID(candidateProfile.CandidateId);
             if (candidate != null)
-            {
-                
-
+            { 
                 dbcontext.Entry<CandidateProfile>(candidateProfile).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                 dbcontext.SaveChanges();
                 return isSuccess = true;

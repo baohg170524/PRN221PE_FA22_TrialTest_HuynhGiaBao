@@ -109,7 +109,7 @@ namespace CandidateManagement_HuynhGiaBao
                 (DataGridRow)dataGrid.ItemContainerGenerator.ContainerFromIndex(dataGrid.SelectedIndex);
             if(row == null)
             {
-                MessageBox.Show("err");
+               
                 return;
             }
             DataGridCell RowColumn = dataGrid.Columns[0].GetCellContent(row).Parent as DataGridCell;
@@ -132,7 +132,7 @@ namespace CandidateManagement_HuynhGiaBao
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Application.Current.Shutdown();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -186,6 +186,23 @@ namespace CandidateManagement_HuynhGiaBao
                 MessageBox.Show(ex.Message);
 
             }
+        }
+
+        private void ResetInput()
+        {
+            txtCanID.Text = null;
+            txtFullname.Text = null;
+            txtImgurl.Text = null;
+            txtDescription.Text = null;
+            dtpBirthDay.SelectedDate = null;
+             cmbPostID.SelectedValue =null ;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.Show();
         }
     }
 }
